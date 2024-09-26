@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SidebarBackground = new System.Windows.Forms.Panel();
             this.SearchBar = new System.Windows.Forms.TextBox();
+            this.archivedTasks = new System.Windows.Forms.Button();
+            this.myTags = new System.Windows.Forms.Button();
             this.SidebarBackground.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,18 +47,39 @@
             // SidebarBackground
             // 
             this.SidebarBackground.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SidebarBackground.Controls.Add(this.myTags);
+            this.SidebarBackground.Controls.Add(this.archivedTasks);
             this.SidebarBackground.Controls.Add(this.SearchBar);
             this.SidebarBackground.Location = new System.Drawing.Point(0, 0);
             this.SidebarBackground.Name = "SidebarBackground";
-            this.SidebarBackground.Size = new System.Drawing.Size(329, 658);
+            this.SidebarBackground.Size = new System.Drawing.Size(205, 658);
             this.SidebarBackground.TabIndex = 1;
             // 
             // SearchBar
             // 
-            this.SearchBar.Location = new System.Drawing.Point(4, 3);
+            this.SearchBar.Location = new System.Drawing.Point(12, 3);
             this.SearchBar.Name = "SearchBar";
-            this.SearchBar.Size = new System.Drawing.Size(322, 20);
+            this.SearchBar.Size = new System.Drawing.Size(175, 20);
             this.SearchBar.TabIndex = 0;
+            // 
+            // archivedTasks
+            // 
+            this.archivedTasks.Location = new System.Drawing.Point(52, 88);
+            this.archivedTasks.Name = "archivedTasks";
+            this.archivedTasks.Size = new System.Drawing.Size(75, 23);
+            this.archivedTasks.TabIndex = 1;
+            this.archivedTasks.Text = "Archived Tasks";
+            this.archivedTasks.UseVisualStyleBackColor = true;
+            this.archivedTasks.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // myTags
+            // 
+            this.myTags.Location = new System.Drawing.Point(52, 137);
+            this.myTags.Name = "myTags";
+            this.myTags.Size = new System.Drawing.Size(75, 23);
+            this.myTags.TabIndex = 2;
+            this.myTags.Text = "My Tasks";
+            this.myTags.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -80,6 +103,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel SidebarBackground;
         private System.Windows.Forms.TextBox SearchBar;
+        private System.Windows.Forms.Button archivedTasks;
+        private System.Windows.Forms.Button myTags;
     }
 }
 
