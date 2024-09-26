@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.SidebarBackground = new System.Windows.Forms.Panel();
+            this.SearchBar = new System.Windows.Forms.TextBox();
+            this.SidebarBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -36,18 +39,37 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(472, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            // 
+            // SidebarBackground
+            // 
+            this.SidebarBackground.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SidebarBackground.Controls.Add(this.SearchBar);
+            this.SidebarBackground.Location = new System.Drawing.Point(0, 0);
+            this.SidebarBackground.Name = "SidebarBackground";
+            this.SidebarBackground.Size = new System.Drawing.Size(329, 658);
+            this.SidebarBackground.TabIndex = 1;
+            // 
+            // SearchBar
+            // 
+            this.SearchBar.Location = new System.Drawing.Point(4, 3);
+            this.SearchBar.Name = "SearchBar";
+            this.SearchBar.Size = new System.Drawing.Size(322, 20);
+            this.SearchBar.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(712, 715);
+            this.Controls.Add(this.SidebarBackground);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.SidebarBackground.ResumeLayout(false);
+            this.SidebarBackground.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -56,6 +78,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel SidebarBackground;
+        private System.Windows.Forms.TextBox SearchBar;
     }
 }
 

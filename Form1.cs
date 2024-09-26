@@ -16,5 +16,10 @@ namespace Group5_IA_To_Do_List
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
