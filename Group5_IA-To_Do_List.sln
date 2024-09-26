@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Group5_IA-To_Do_List", "Group5_IA-To_Do_List.csproj", "{405C2800-F50D-4680-8974-A618E63E280F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{405C2800-F50D-4680-8974-A618E63E280F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{405C2800-F50D-4680-8974-A618E63E280F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{405C2800-F50D-4680-8974-A618E63E280F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{405C2800-F50D-4680-8974-A618E63E280F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFCD048B-1882-46F9-A216-E187551BAA55}
+	EndGlobalSection
+EndGlobal
