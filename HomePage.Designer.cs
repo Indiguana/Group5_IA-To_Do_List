@@ -32,11 +32,11 @@
             this.SidebarBackground = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.MyTasks = new System.Windows.Forms.ComboBox();
-            this.myTags = new System.Windows.Forms.Button();
-            this.archivedTasks = new System.Windows.Forms.Button();
             this.IBENGLISHWORK = new System.Windows.Forms.CheckedListBox();
             this.DecaProject = new System.Windows.Forms.CheckedListBox();
             this.Title = new System.Windows.Forms.TextBox();
+            this.EDESSAYS = new System.Windows.Forms.CheckedListBox();
+            this.addTask = new System.Windows.Forms.Button();
             this.SidebarBackground.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,8 +53,6 @@
             this.SidebarBackground.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.SidebarBackground.Controls.Add(this.comboBox1);
             this.SidebarBackground.Controls.Add(this.MyTasks);
-            this.SidebarBackground.Controls.Add(this.myTags);
-            this.SidebarBackground.Controls.Add(this.archivedTasks);
             this.SidebarBackground.Location = new System.Drawing.Point(0, 0);
             this.SidebarBackground.Name = "SidebarBackground";
             this.SidebarBackground.Size = new System.Drawing.Size(205, 658);
@@ -62,54 +60,42 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(24, 296);
+            this.comboBox1.Location = new System.Drawing.Point(24, 151);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 4;
+            this.comboBox1.Text = "My Tags";
             // 
             // MyTasks
             // 
+            this.MyTasks.BackColor = System.Drawing.Color.White;
+            this.MyTasks.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.MyTasks.ForeColor = System.Drawing.Color.Black;
             this.MyTasks.FormattingEnabled = true;
-            this.MyTasks.Location = new System.Drawing.Point(24, 233);
+            this.MyTasks.Location = new System.Drawing.Point(24, 112);
             this.MyTasks.Name = "MyTasks";
-            this.MyTasks.Size = new System.Drawing.Size(121, 21);
+            this.MyTasks.Size = new System.Drawing.Size(121, 24);
             this.MyTasks.TabIndex = 3;
-            // 
-            // myTags
-            // 
-            this.myTags.Location = new System.Drawing.Point(52, 137);
-            this.myTags.Name = "myTags";
-            this.myTags.Size = new System.Drawing.Size(75, 23);
-            this.myTags.TabIndex = 2;
-            this.myTags.Text = "My Tasks";
-            this.myTags.UseVisualStyleBackColor = true;
-            // 
-            // archivedTasks
-            // 
-            this.archivedTasks.Location = new System.Drawing.Point(52, 88);
-            this.archivedTasks.Name = "archivedTasks";
-            this.archivedTasks.Size = new System.Drawing.Size(75, 23);
-            this.archivedTasks.TabIndex = 1;
-            this.archivedTasks.Text = "Archived Tasks";
-            this.archivedTasks.UseVisualStyleBackColor = true;
+            this.MyTasks.Text = "Archived";
             // 
             // IBENGLISHWORK
             // 
-            this.IBENGLISHWORK.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.IBENGLISHWORK.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.IBENGLISHWORK.FormattingEnabled = true;
-            this.IBENGLISHWORK.Location = new System.Drawing.Point(277, 99);
+            this.IBENGLISHWORK.Location = new System.Drawing.Point(277, 109);
             this.IBENGLISHWORK.Name = "IBENGLISHWORK";
-            this.IBENGLISHWORK.Size = new System.Drawing.Size(340, 4);
+            this.IBENGLISHWORK.Size = new System.Drawing.Size(340, 27);
             this.IBENGLISHWORK.TabIndex = 2;
             // 
             // DecaProject
             // 
-            this.DecaProject.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.DecaProject.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
             this.DecaProject.FormattingEnabled = true;
-            this.DecaProject.Location = new System.Drawing.Point(277, 141);
+            this.DecaProject.Location = new System.Drawing.Point(277, 145);
             this.DecaProject.Name = "DecaProject";
-            this.DecaProject.Size = new System.Drawing.Size(340, 4);
+            this.DecaProject.Size = new System.Drawing.Size(340, 27);
             this.DecaProject.TabIndex = 3;
             // 
             // Title
@@ -121,11 +107,34 @@
             this.Title.TabIndex = 4;
             this.Title.Text = "Client To-Do List";
             // 
+            // EDESSAYS
+            // 
+            this.EDESSAYS.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold);
+            this.EDESSAYS.FormattingEnabled = true;
+            this.EDESSAYS.Location = new System.Drawing.Point(277, 178);
+            this.EDESSAYS.Name = "EDESSAYS";
+            this.EDESSAYS.Size = new System.Drawing.Size(340, 27);
+            this.EDESSAYS.TabIndex = 5;
+            // 
+            // addTask
+            // 
+            this.addTask.AutoEllipsis = true;
+            this.addTask.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.addTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.addTask.Location = new System.Drawing.Point(621, 576);
+            this.addTask.Name = "addTask";
+            this.addTask.Size = new System.Drawing.Size(73, 66);
+            this.addTask.TabIndex = 6;
+            this.addTask.Text = "+";
+            this.addTask.UseVisualStyleBackColor = false;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 715);
+            this.Controls.Add(this.addTask);
+            this.Controls.Add(this.EDESSAYS);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.DecaProject);
             this.Controls.Add(this.IBENGLISHWORK);
@@ -144,13 +153,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel SidebarBackground;
-        private System.Windows.Forms.Button archivedTasks;
-        private System.Windows.Forms.Button myTags;
         private System.Windows.Forms.CheckedListBox IBENGLISHWORK;
         private System.Windows.Forms.ComboBox MyTasks;
         private System.Windows.Forms.CheckedListBox DecaProject;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox Title;
+        private System.Windows.Forms.CheckedListBox EDESSAYS;
+        private System.Windows.Forms.Button addTask;
     }
 }
 
