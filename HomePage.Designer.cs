@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.label1 = new System.Windows.Forms.Label();
             this.SidebarBackground = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -37,7 +38,11 @@
             this.Title = new System.Windows.Forms.TextBox();
             this.EDESSAYS = new System.Windows.Forms.CheckedListBox();
             this.addTask = new System.Windows.Forms.Button();
+            this.serviceController1 = new System.ServiceProcess.ServiceController();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SidebarBackground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,6 +56,7 @@
             // SidebarBackground
             // 
             this.SidebarBackground.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SidebarBackground.Controls.Add(this.button1);
             this.SidebarBackground.Controls.Add(this.comboBox1);
             this.SidebarBackground.Controls.Add(this.MyTasks);
             this.SidebarBackground.Location = new System.Drawing.Point(0, 0);
@@ -86,7 +92,7 @@
             this.IBENGLISHWORK.FormattingEnabled = true;
             this.IBENGLISHWORK.Location = new System.Drawing.Point(277, 109);
             this.IBENGLISHWORK.Name = "IBENGLISHWORK";
-            this.IBENGLISHWORK.Size = new System.Drawing.Size(340, 27);
+            this.IBENGLISHWORK.Size = new System.Drawing.Size(340, 4);
             this.IBENGLISHWORK.TabIndex = 2;
             // 
             // DecaProject
@@ -95,7 +101,7 @@
             this.DecaProject.FormattingEnabled = true;
             this.DecaProject.Location = new System.Drawing.Point(277, 145);
             this.DecaProject.Name = "DecaProject";
-            this.DecaProject.Size = new System.Drawing.Size(340, 27);
+            this.DecaProject.Size = new System.Drawing.Size(340, 4);
             this.DecaProject.TabIndex = 3;
             // 
             // Title
@@ -113,7 +119,7 @@
             this.EDESSAYS.FormattingEnabled = true;
             this.EDESSAYS.Location = new System.Drawing.Point(277, 178);
             this.EDESSAYS.Name = "EDESSAYS";
-            this.EDESSAYS.Size = new System.Drawing.Size(340, 27);
+            this.EDESSAYS.Size = new System.Drawing.Size(340, 4);
             this.EDESSAYS.TabIndex = 5;
             // 
             // addTask
@@ -121,18 +127,38 @@
             this.addTask.AutoEllipsis = true;
             this.addTask.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.addTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.addTask.Location = new System.Drawing.Point(621, 576);
+            this.addTask.Location = new System.Drawing.Point(627, 489);
             this.addTask.Name = "addTask";
             this.addTask.Size = new System.Drawing.Size(73, 66);
             this.addTask.TabIndex = 6;
             this.addTask.Text = "+";
             this.addTask.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(12, 489);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 47);
+            this.button1.TabIndex = 7;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(328, 241);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 715);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.addTask);
             this.Controls.Add(this.EDESSAYS);
             this.Controls.Add(this.Title);
@@ -141,9 +167,11 @@
             this.Controls.Add(this.SidebarBackground);
             this.Controls.Add(this.label1);
             this.Name = "HomePage";
+            this.ShowInTaskbar = false;
             this.Text = "Home Page";
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.SidebarBackground.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,6 +188,9 @@
         private System.Windows.Forms.TextBox Title;
         private System.Windows.Forms.CheckedListBox EDESSAYS;
         private System.Windows.Forms.Button addTask;
+        private System.Windows.Forms.Button button1;
+        private System.ServiceProcess.ServiceController serviceController1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
