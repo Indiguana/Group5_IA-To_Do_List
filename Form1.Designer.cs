@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.SidebarBackground = new System.Windows.Forms.Panel();
-            this.SearchBar = new System.Windows.Forms.TextBox();
-            this.archivedTasks = new System.Windows.Forms.Button();
+            this.MyTasks = new System.Windows.Forms.ComboBox();
             this.myTags = new System.Windows.Forms.Button();
+            this.archivedTasks = new System.Windows.Forms.Button();
             this.IBENGLISHWORK = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -51,20 +51,30 @@
             // 
             this.SidebarBackground.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.SidebarBackground.Controls.Add(this.comboBox1);
+            this.SidebarBackground.Controls.Add(this.MyTasks);
             this.SidebarBackground.Controls.Add(this.myTags);
             this.SidebarBackground.Controls.Add(this.archivedTasks);
-            this.SidebarBackground.Controls.Add(this.SearchBar);
             this.SidebarBackground.Location = new System.Drawing.Point(0, 0);
             this.SidebarBackground.Name = "SidebarBackground";
             this.SidebarBackground.Size = new System.Drawing.Size(205, 658);
             this.SidebarBackground.TabIndex = 1;
             // 
-            // SearchBar
+            // MyTasks
             // 
-            this.SearchBar.Location = new System.Drawing.Point(12, 3);
-            this.SearchBar.Name = "SearchBar";
-            this.SearchBar.Size = new System.Drawing.Size(175, 20);
-            this.SearchBar.TabIndex = 0;
+            this.MyTasks.FormattingEnabled = true;
+            this.MyTasks.Location = new System.Drawing.Point(24, 233);
+            this.MyTasks.Name = "MyTasks";
+            this.MyTasks.Size = new System.Drawing.Size(121, 21);
+            this.MyTasks.TabIndex = 3;
+            // 
+            // myTags
+            // 
+            this.myTags.Location = new System.Drawing.Point(52, 137);
+            this.myTags.Name = "myTags";
+            this.myTags.Size = new System.Drawing.Size(75, 23);
+            this.myTags.TabIndex = 2;
+            this.myTags.Text = "My Tasks";
+            this.myTags.UseVisualStyleBackColor = true;
             // 
             // archivedTasks
             // 
@@ -75,15 +85,6 @@
             this.archivedTasks.Text = "Archived Tasks";
             this.archivedTasks.UseVisualStyleBackColor = true;
             this.archivedTasks.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // myTags
-            // 
-            this.myTags.Location = new System.Drawing.Point(52, 137);
-            this.myTags.Name = "myTags";
-            this.myTags.Size = new System.Drawing.Size(75, 23);
-            this.myTags.TabIndex = 2;
-            this.myTags.Text = "My Tasks";
-            this.myTags.UseVisualStyleBackColor = true;
             // 
             // IBENGLISHWORK
             // 
@@ -105,10 +106,11 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 29);
+            this.comboBox1.Location = new System.Drawing.Point(24, 296);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -123,7 +125,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SidebarBackground.ResumeLayout(false);
-            this.SidebarBackground.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,12 +134,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel SidebarBackground;
-        private System.Windows.Forms.TextBox SearchBar;
         private System.Windows.Forms.Button archivedTasks;
         private System.Windows.Forms.Button myTags;
         private System.Windows.Forms.CheckedListBox IBENGLISHWORK;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox MyTasks;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
