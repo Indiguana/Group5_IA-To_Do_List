@@ -30,12 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.SidebarBackground = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.MyTasks = new System.Windows.Forms.ComboBox();
             this.myTags = new System.Windows.Forms.Button();
             this.archivedTasks = new System.Windows.Forms.Button();
             this.IBENGLISHWORK = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.DecaProject = new System.Windows.Forms.CheckedListBox();
+            this.Title = new System.Windows.Forms.TextBox();
             this.SidebarBackground.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,15 @@
             this.SidebarBackground.Name = "SidebarBackground";
             this.SidebarBackground.Size = new System.Drawing.Size(205, 658);
             this.SidebarBackground.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(24, 296);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // MyTasks
             // 
@@ -88,6 +98,7 @@
             // 
             // IBENGLISHWORK
             // 
+            this.IBENGLISHWORK.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.IBENGLISHWORK.FormattingEnabled = true;
             this.IBENGLISHWORK.Location = new System.Drawing.Point(277, 99);
             this.IBENGLISHWORK.Name = "IBENGLISHWORK";
@@ -95,29 +106,31 @@
             this.IBENGLISHWORK.TabIndex = 2;
             this.IBENGLISHWORK.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
-            // checkedListBox1
+            // DecaProject
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(277, 141);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(340, 19);
-            this.checkedListBox1.TabIndex = 3;
+            this.DecaProject.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.DecaProject.FormattingEnabled = true;
+            this.DecaProject.Location = new System.Drawing.Point(277, 141);
+            this.DecaProject.Name = "DecaProject";
+            this.DecaProject.Size = new System.Drawing.Size(340, 19);
+            this.DecaProject.TabIndex = 3;
             // 
-            // comboBox1
+            // Title
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(24, 296);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Title.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(218, 4);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(445, 57);
+            this.Title.TabIndex = 4;
+            this.Title.Text = "Client To-Do List";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 715);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.Title);
+            this.Controls.Add(this.DecaProject);
             this.Controls.Add(this.IBENGLISHWORK);
             this.Controls.Add(this.SidebarBackground);
             this.Controls.Add(this.label1);
@@ -138,8 +151,9 @@
         private System.Windows.Forms.Button myTags;
         private System.Windows.Forms.CheckedListBox IBENGLISHWORK;
         private System.Windows.Forms.ComboBox MyTasks;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox DecaProject;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox Title;
     }
 }
 
