@@ -1,6 +1,6 @@
 ﻿namespace Group5_IA_To_Do_List
 {
-    partial class Form1
+    partial class HomePage
     {
         /// <summary>
         /// Required designer variable.
@@ -67,7 +67,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // MyTasks
             // 
@@ -94,7 +93,6 @@
             this.archivedTasks.TabIndex = 1;
             this.archivedTasks.Text = "Archived Tasks";
             this.archivedTasks.UseVisualStyleBackColor = true;
-            this.archivedTasks.Click += new System.EventHandler(this.button1_Click);
             // 
             // IBENGLISHWORK
             // 
@@ -102,9 +100,8 @@
             this.IBENGLISHWORK.FormattingEnabled = true;
             this.IBENGLISHWORK.Location = new System.Drawing.Point(277, 99);
             this.IBENGLISHWORK.Name = "IBENGLISHWORK";
-            this.IBENGLISHWORK.Size = new System.Drawing.Size(340, 19);
+            this.IBENGLISHWORK.Size = new System.Drawing.Size(340, 4);
             this.IBENGLISHWORK.TabIndex = 2;
-            this.IBENGLISHWORK.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // DecaProject
             // 
@@ -112,7 +109,7 @@
             this.DecaProject.FormattingEnabled = true;
             this.DecaProject.Location = new System.Drawing.Point(277, 141);
             this.DecaProject.Name = "DecaProject";
-            this.DecaProject.Size = new System.Drawing.Size(340, 19);
+            this.DecaProject.Size = new System.Drawing.Size(340, 4);
             this.DecaProject.TabIndex = 3;
             // 
             // Title
@@ -124,7 +121,7 @@
             this.Title.TabIndex = 4;
             this.Title.Text = "Client To-Do List";
             // 
-            // Form1
+            // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,9 +131,9 @@
             this.Controls.Add(this.IBENGLISHWORK);
             this.Controls.Add(this.SidebarBackground);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "HomePage";
+            this.Text = "Home Page";
+            this.Load += new System.EventHandler(this.HomePage_Load);
             this.SidebarBackground.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
