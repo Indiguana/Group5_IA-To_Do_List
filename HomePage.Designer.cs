@@ -67,6 +67,7 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.Text = "My Tags";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.myTags_SelectedIndexChanged);
             // 
             // MyTasks
             // 
@@ -79,6 +80,7 @@
             this.MyTasks.Size = new System.Drawing.Size(121, 24);
             this.MyTasks.TabIndex = 3;
             this.MyTasks.Text = "Archived";
+            this.MyTasks.SelectedIndexChanged += new System.EventHandler(this.archived_SelectedIndexChanged);
             // 
             // IBENGLISHWORK
             // 
@@ -86,7 +88,7 @@
             this.IBENGLISHWORK.FormattingEnabled = true;
             this.IBENGLISHWORK.Location = new System.Drawing.Point(277, 109);
             this.IBENGLISHWORK.Name = "IBENGLISHWORK";
-            this.IBENGLISHWORK.Size = new System.Drawing.Size(340, 27);
+            this.IBENGLISHWORK.Size = new System.Drawing.Size(340, 4);
             this.IBENGLISHWORK.TabIndex = 2;
             // 
             // DecaProject
@@ -95,7 +97,7 @@
             this.DecaProject.FormattingEnabled = true;
             this.DecaProject.Location = new System.Drawing.Point(277, 145);
             this.DecaProject.Name = "DecaProject";
-            this.DecaProject.Size = new System.Drawing.Size(340, 27);
+            this.DecaProject.Size = new System.Drawing.Size(340, 4);
             this.DecaProject.TabIndex = 3;
             // 
             // Title
@@ -113,7 +115,7 @@
             this.EDESSAYS.FormattingEnabled = true;
             this.EDESSAYS.Location = new System.Drawing.Point(277, 178);
             this.EDESSAYS.Name = "EDESSAYS";
-            this.EDESSAYS.Size = new System.Drawing.Size(340, 27);
+            this.EDESSAYS.Size = new System.Drawing.Size(340, 4);
             this.EDESSAYS.TabIndex = 5;
             // 
             // addTask

@@ -21,5 +21,23 @@ namespace Group5_IA_To_Do_List
         {
             this.CenterToScreen();
         }
+
+        private void archived_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public enum myTags
+        {
+            IBEnglish = 0,
+            IBCS = 1,
+            German = 2,
+            IBAnalysis = 3
+        }
+
+        private void myTags_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
