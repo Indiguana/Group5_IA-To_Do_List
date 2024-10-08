@@ -39,5 +39,17 @@ namespace Group5_IA_To_Do_List
         {
            
         }
+
+        int numTasks = 0;
+
+        private void addTask_Click(object sender, EventArgs e)
+        {
+            numTasks++;
+            TextBox txtrun = new TextBox();
+            txtrun.Name = "txtDynamic";
+            txtrun.Location = new System.Drawing.Point(225, 65 + 35 * numTasks);
+            txtrun.Size = new System.Drawing.Size(200, 25);
+            this.Controls.Add(txtrun);
+        }
     }
 }
