@@ -12,9 +12,11 @@ namespace Group5_IA_To_Do_List
 {
     public partial class HomePage : Form
     {
+        private List<Task> tasks = new List<Task>();
         public HomePage()
         {
             InitializeComponent();
+            checkedListBoxTasks.ItemCheck += checkedListBoxTasks_SelectedIndexChanged;
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -44,12 +46,35 @@ namespace Group5_IA_To_Do_List
 
         private void addTask_Click(object sender, EventArgs e)
         {
+            Form1 taskForm = new Form1();
+            taskForm.TaskCreated += TaskForm_TaskCreated;
+            taskForm.ShowDialog(); 
+            /*
             numTasks++;
             TextBox txtrun = new TextBox();
             txtrun.Name = "txtDynamic";
             txtrun.Location = new System.Drawing.Point(225, 65 + 35 * numTasks);
             txtrun.Size = new System.Drawing.Size(200, 25);
-            this.Controls.Add(txtrun);
+            this.Controls.Add(txtrun);*/
+        }
+
+        private void UpdateTaskList()
+        {
+            foreach (var task in tasks)
+            {
+                string displayText = $"{task.Subject}: {task.Description} Due: {task.DueDate.ToShortDateString()} (Tag: {task.Tags})";
+                checkedListBoxTasks.Items.Add(displayText);
+            }
+        }
+
+        private void TaskForm_TaskCreated(object sender, TaskEventArgs e)
+        {
+            tasks.Add(e.NewTask);
+            UpdateTaskList();
+        }
+
+        private void checkedListBoxTasks_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
