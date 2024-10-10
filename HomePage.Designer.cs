@@ -44,9 +44,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(472, 162);
+            this.label1.Location = new System.Drawing.Point(629, 199);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 0;
             // 
             // SidebarBackground
@@ -56,16 +57,18 @@
             this.SidebarBackground.Controls.Add(this.comboBox1);
             this.SidebarBackground.Controls.Add(this.MyTasks);
             this.SidebarBackground.Location = new System.Drawing.Point(0, 0);
+            this.SidebarBackground.Margin = new System.Windows.Forms.Padding(4);
             this.SidebarBackground.Name = "SidebarBackground";
-            this.SidebarBackground.Size = new System.Drawing.Size(205, 658);
+            this.SidebarBackground.Size = new System.Drawing.Size(449, 810);
             this.SidebarBackground.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(12, 489);
+            this.button1.Location = new System.Drawing.Point(16, 602);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 47);
+            this.button1.Size = new System.Drawing.Size(65, 58);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -73,9 +76,10 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(24, 151);
+            this.comboBox1.Location = new System.Drawing.Point(16, 188);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(404, 27);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.Text = "My Tags";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.myTags_SelectedIndexChanged);
@@ -83,12 +87,13 @@
             // MyTasks
             // 
             this.MyTasks.BackColor = System.Drawing.Color.White;
-            this.MyTasks.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.MyTasks.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MyTasks.ForeColor = System.Drawing.Color.Black;
             this.MyTasks.FormattingEnabled = true;
-            this.MyTasks.Location = new System.Drawing.Point(24, 112);
+            this.MyTasks.Location = new System.Drawing.Point(16, 124);
+            this.MyTasks.Margin = new System.Windows.Forms.Padding(4);
             this.MyTasks.Name = "MyTasks";
-            this.MyTasks.Size = new System.Drawing.Size(121, 24);
+            this.MyTasks.Size = new System.Drawing.Size(404, 30);
             this.MyTasks.TabIndex = 3;
             this.MyTasks.Text = "Archived";
             this.MyTasks.SelectedIndexChanged += new System.EventHandler(this.archived_SelectedIndexChanged);
@@ -96,20 +101,23 @@
             // Title
             // 
             this.Title.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(225, 20);
+            this.Title.Location = new System.Drawing.Point(493, 13);
+            this.Title.Margin = new System.Windows.Forms.Padding(4);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(461, 57);
+            this.Title.Size = new System.Drawing.Size(613, 69);
             this.Title.TabIndex = 4;
-            this.Title.Text = "Client To-Do List";
+            this.Title.Text = "To-Do List";
+            this.Title.TextChanged += new System.EventHandler(this.Title_TextChanged);
             // 
             // createTask
             // 
             this.createTask.AutoEllipsis = true;
             this.createTask.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.createTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.createTask.Location = new System.Drawing.Point(550, 449);
+            this.createTask.Location = new System.Drawing.Point(1072, 590);
+            this.createTask.Margin = new System.Windows.Forms.Padding(4);
             this.createTask.Name = "createTask";
-            this.createTask.Size = new System.Drawing.Size(134, 66);
+            this.createTask.Size = new System.Drawing.Size(179, 81);
             this.createTask.TabIndex = 6;
             this.createTask.Text = "Create New Task";
             this.createTask.UseVisualStyleBackColor = false;
@@ -117,24 +125,26 @@
             // 
             // checkedListBoxTasks
             // 
+            this.checkedListBoxTasks.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBoxTasks.FormattingEnabled = true;
-            this.checkedListBoxTasks.Location = new System.Drawing.Point(225, 101);
-            this.checkedListBoxTasks.Margin = new System.Windows.Forms.Padding(2);
+            this.checkedListBoxTasks.Location = new System.Drawing.Point(493, 124);
+            this.checkedListBoxTasks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBoxTasks.Name = "checkedListBoxTasks";
-            this.checkedListBoxTasks.Size = new System.Drawing.Size(461, 319);
+            this.checkedListBoxTasks.Size = new System.Drawing.Size(658, 429);
             this.checkedListBoxTasks.TabIndex = 9;
             this.checkedListBoxTasks.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxTasks_SelectedIndexChanged);
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 715);
+            this.ClientSize = new System.Drawing.Size(1300, 880);
             this.Controls.Add(this.checkedListBoxTasks);
             this.Controls.Add(this.createTask);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.SidebarBackground);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomePage";
             this.ShowInTaskbar = false;
             this.Text = "Home Page";

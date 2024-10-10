@@ -44,49 +44,33 @@ namespace Group5_IA_To_Do_List
            
         }
 
-        int numTasks = 0;
-
         private void addTask_Click(object sender, EventArgs e)
         {
             Form1 taskForm = new Form1();
             taskForm.TaskCreated += TaskForm_TaskCreated;
             taskForm.ShowDialog(); 
-            /*
-            numTasks++;
-            TextBox txtrun = new TextBox();
-            txtrun.Name = "txtDynamic";
-            txtrun.Location = new System.Drawing.Point(225, 65 + 35 * numTasks);
-            txtrun.Size = new System.Drawing.Size(200, 25);
-            this.Controls.Add(txtrun);*/
         }
-
-        int onTask = 0;
         private void UpdateTaskList()
         {
-            for (int i = onTask; i < tasks.Count; i++)
+            for (int i = 0; i < tasks.Count; i++)
             {
                 string displayText = $"{tasks[i].Subject}: {tasks[i].Description} Due: {tasks[i].DueDate.ToShortDateString()} (Tag: {tasks[i].Tags})";
                 checkedListBoxTasks.Items.Add(displayText);
-                onTask++;
             }
         }
-        int abc = 0;
         private void UpdateArchives()
         {
-            for (int i = abc; i < archivedTasks.Count; i++)
+            if (archivedTasks.Count > 0)
             {
-                string disp = $"{archivedTasks[i].Subject}: {archivedTasks[i].Description} Due: {archivedTasks[i].DueDate.ToShortDateString()} (Tag: {tasks[i].Tags})";
+                string disp = $"{archivedTasks[archivedTasks.Count-1].Subject}: {archivedTasks[archivedTasks.Count-1].Description} Due: {archivedTasks[archivedTasks.Count-1].DueDate.ToShortDateString()}";
                 MyTasks.Items.Add(disp);
-                i++;
             }
         }
         private void TaskForm_TaskCreated(object sender, TaskEventArgs e)
         {
             tasks.Add(e.NewTask);
             UpdateTaskList();
-            UpdateArchives();
         }
- 
 
         private void checkedListBoxTasks_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -94,17 +78,12 @@ namespace Group5_IA_To_Do_List
             {
                 if (checkedListBoxTasks.GetItemChecked(i))
                 {
+                    archivedTasks.Add(tasks[i]);
                     checkedListBoxTasks.Items.RemoveAt(i);
-
-  
-                    if (i < tasks.Count)
-                    {
-                        archivedTasks.Add(tasks[i]);
-                        tasks.RemoveAt(i);
-                    }
+                    tasks.RemoveAt(i);
+                    UpdateArchives();
                 }
             }
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -112,8 +91,10 @@ namespace Group5_IA_To_Do_List
 
         }
 
-       
+        private void Title_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
     }
 
