@@ -14,6 +14,7 @@ namespace Group5_IA_To_Do_List
     {
         private List<Task> tasks = new List<Task>();
         private List<Task> archivedTasks = new List<Task>();
+
         public HomePage()
         {
             InitializeComponent();
