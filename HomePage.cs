@@ -58,12 +58,14 @@ namespace Group5_IA_To_Do_List
             this.Controls.Add(txtrun);*/
         }
 
+        int onTask = 0;
         private void UpdateTaskList()
         {
-            foreach (var task in tasks)
+            for (int i = onTask; i < tasks.Count; i++)
             {
-                string displayText = $"{task.Subject}: {task.Description} Due: {task.DueDate.ToShortDateString()} (Tag: {task.Tags})";
+                string displayText = $"{tasks[i].Subject}: {tasks[i].Description} Due: {tasks[i].DueDate.ToShortDateString()} (Tag: {tasks[i].Tags})";
                 checkedListBoxTasks.Items.Add(displayText);
+                onTask++;
             }
         }
 
