@@ -13,6 +13,7 @@ namespace Group5_IA_To_Do_List
     public partial class HomePage : Form
     {
         private List<Task> tasks = new List<Task>();
+        private List<Task> archivedTasks = new List<Task>();
         public HomePage()
         {
             InitializeComponent();
@@ -23,10 +24,10 @@ namespace Group5_IA_To_Do_List
         {
             this.CenterToScreen();
         }
-
+        
         private void archived_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         public enum myTags
@@ -68,11 +69,21 @@ namespace Group5_IA_To_Do_List
                 onTask++;
             }
         }
-
+        int abc = 0;
+        private void UpdateArchives()
+        {
+            for (int i = abc; i < archivedTasks.Count; i++)
+            {
+                string disp = $"{archivedTasks[i].Subject}: {archivedTasks[i].Description} Due: {archivedTasks[i].DueDate.ToShortDateString()} (Tag: {tasks[i].Tags})";
+                MyTasks.Items.Add(disp);
+                i++;
+            }
+        }
         private void TaskForm_TaskCreated(object sender, TaskEventArgs e)
         {
             tasks.Add(e.NewTask);
             UpdateTaskList();
+            UpdateArchives();
         }
  
 
@@ -84,9 +95,10 @@ namespace Group5_IA_To_Do_List
                 {
                     checkedListBoxTasks.Items.RemoveAt(i);
 
- 
+  
                     if (i < tasks.Count)
                     {
+                        archivedTasks.Add(tasks[i]);
                         tasks.RemoveAt(i);
                     }
                 }
