@@ -74,9 +74,33 @@ namespace Group5_IA_To_Do_List
             tasks.Add(e.NewTask);
             UpdateTaskList();
         }
+ 
 
         private void checkedListBoxTasks_SelectedIndexChanged(object sender, EventArgs e)
         {
+            for (int i = checkedListBoxTasks.Items.Count - 1; i >= 0; i--)
+            {
+                if (checkedListBoxTasks.GetItemChecked(i))
+                {
+                    checkedListBoxTasks.Items.RemoveAt(i);
+
+ 
+                    if (i < tasks.Count)
+                    {
+                        tasks.RemoveAt(i);
+                    }
+                }
+            }
+
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
     }
-}
+    }
+

@@ -119,7 +119,7 @@
             // 
             this.checkedListBoxTasks.FormattingEnabled = true;
             this.checkedListBoxTasks.Location = new System.Drawing.Point(225, 101);
-            this.checkedListBoxTasks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBoxTasks.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBoxTasks.Name = "checkedListBoxTasks";
             this.checkedListBoxTasks.Size = new System.Drawing.Size(461, 319);
             this.checkedListBoxTasks.TabIndex = 9;
